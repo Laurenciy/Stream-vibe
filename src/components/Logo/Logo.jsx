@@ -10,7 +10,7 @@ const title = 'Home'
 
   return (
     <a
-    className="logo"
+    className={classNames(className, 'logo')}
     href="/"
     title={title}
     aria-label={title}
@@ -18,7 +18,7 @@ const title = 'Home'
       <img
         src="/logo.svg"
         alt=""
-        className={classNames(className, 'logo')}
+        className="logo__image"
         width={199}
         height={60}
         loading={loading}
