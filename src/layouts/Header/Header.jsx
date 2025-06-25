@@ -33,10 +33,10 @@ const {
   ]
 
   return (
-    <heade className="header">
+    <heade className="header" data-js-overlay-menu="">
       <div className="header__inner container">
         <Logo className="header__logo" loading='eager'/>
-        <dialog className='header__overlay-menu-dailog' >
+        <dialog className='header__overlay-menu-dialog' data-js-overlay-menu-dialog="">
           <nav className="header__menu">
             <ul className="header__menu-list">
               {menuItems.map(({label, href}, index) => (
@@ -69,6 +69,9 @@ const {
         </dialog>
         <BurgerButton
           className="header__burger-button visible-tablet"
+          extraAttrs={{
+            'data-js-overlay-menu-burger-button': ''
+          }}
         />
       </div>
     </heade>

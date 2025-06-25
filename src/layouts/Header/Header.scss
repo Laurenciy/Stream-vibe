@@ -27,7 +27,7 @@
     column-gap: 16px;
   }
 
-  &__overlay-menu-dailog {
+  &__overlay-menu-dialog {
     position: fixed;
     inset: 0;
 
@@ -41,13 +41,29 @@
     background-color: var(--color-black-20);
     border: none;
     padding: 16px var(--container-padding-x);
+    transition-duration: var(--transition-duration);
+    transition-behavior: allow-discrete;
 
     @include tablet-above {
       display: contents;
     }
 
+    @mixin starting-style {
+      opacity: 0;
+      translate: 50%;
+    }
+//  для добавления плавности появления меню
+
     &[open]{
       display: flex;
+
+      @starting-style {
+        @include starting-style
+      }
+    }
+
+    &:not([open]){
+      @include starting-style
     }
   }
 

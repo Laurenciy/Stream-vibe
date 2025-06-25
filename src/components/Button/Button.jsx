@@ -9,7 +9,7 @@ const Button = (props) => {
     className,
     type = 'button',
     href,
-    // '' (default) | 'transparent'
+    // '' (default) | 'transparent | black-10'
     mode= '',
     target,
     label,
@@ -17,6 +17,7 @@ const Button = (props) => {
     iconName,
     // 'before' | 'after'
     iconPosition = 'before',
+    hasFillIcon,
     IconFallbackSVG
   } = props
 
@@ -29,7 +30,7 @@ const Button = (props) => {
   // если будет назначен href то будет ссылка а, если href не будет назначен, то будет кнопка button
   const title = isLabelHidden ? label : undefined;
   const iconComponent = iconName && (
-    <Icon FallbackSVG={IconFallbackSVG} />);
+    <Icon FallbackSVG={IconFallbackSVG} hasFillIcon={hasFillIcon}/>);
 
 
   return (
