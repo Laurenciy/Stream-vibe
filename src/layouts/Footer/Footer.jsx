@@ -46,7 +46,7 @@ export const Footer = () => {
     },
   ]
 
-  const extraLinks = ['Terms of Use', 'Privacy Policy', 'Cookie Policy']
+  const extraLinks = ['Terms of Use', ' Privacy Policy', ' Cookie Policy']
 
   return (
     <footer className='footer'>

@@ -9,6 +9,7 @@ export default function (props) {
     children,
     title,
     url,
+    isHeaderFixed
   } = props
   return (
     <>
@@ -40,7 +41,7 @@ export default function (props) {
           href="/site.webmanifest"
         />
       </Head>
-      <Header url={url}/>
+      <Header url={url} isHeaderFixed={isHeaderFixed}/>
       <Content>
         {children}
         </Content>

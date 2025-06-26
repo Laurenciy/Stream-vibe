@@ -11,6 +11,7 @@ export const Header = (props) => {
 
 const {
   url,
+  isFixed
 } = props
 
   const menuItems = [
@@ -33,7 +34,9 @@ const {
   ]
 
   return (
-    <heade className="header" data-js-overlay-menu="">
+    <heade className={classNames('header', {
+      'is-fixed': isFixed
+    })} data-js-overlay-menu="">
       <div className="header__inner container">
         <Logo className="header__logo" loading='eager'/>
         <dialog className='header__overlay-menu-dialog' data-js-overlay-menu-dialog="">
