@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Movies & Shows'
+  title: 'Movies & Shows',
 }
 
 export default function () {

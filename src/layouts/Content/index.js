@@ -1,3 +1,3 @@
-import {Content} from "@/layouts/Content/Content";
+import Content from './Content'
 
 export default Content

@@ -1,11 +1,11 @@
 import './CategoryCard.scss'
-import { Image } from "minista";
-import Icon from "@/components/Icon";
+import { Image } from 'minista'
+import Icon from '@/components/Icon'
 
 const CategoryCard = (props) => {
   const {
     title,
-    images =[],
+    images = [],
   } = props
 
   return (
@@ -13,9 +13,10 @@ const CategoryCard = (props) => {
       <div className="category-card__images">
         {images.map((imgSrc, index) => (
           <Image
-            src={imgSrc}
             className="category-card__image"
-            key={index}/>
+            src={imgSrc}
+            key={index}
+          />
         ))}
       </div>
       <div className="category-card__body">
@@ -23,8 +24,8 @@ const CategoryCard = (props) => {
           {title}
         </h3>
         <Icon
-        className="category-card__icon"
-        name="arrow-right"
+          className="category-card__icon"
+          name="arrow-right"
         />
       </div>
     </a>

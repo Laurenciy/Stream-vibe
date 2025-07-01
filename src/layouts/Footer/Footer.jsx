@@ -1,28 +1,27 @@
 import './Footer.scss'
-import Socials from "@/components/Socials";
+import Socials from '@/components/Socials'
 
-export const Footer = () => {
-
+const Footer = () => {
   const menuItems = [
     {
       title: 'Home',
-      links: ['Categories', 'Devices', 'Pricing', 'FAQ']
+      links: ['Categories', 'Devices', 'Pricing', 'FAQ'],
     },
     {
       title: 'Movies',
-      links: ['Gernes', 'Trending', 'New Release', 'Popular']
+      links: ['Gernes', 'Trending', 'New Release', 'Popular'],
     },
     {
-      title: 'Shows',
-      links: ['Gernes', 'Trending', 'New Release', 'Popular']
+      title: 'Popular',
+      links: ['Gernes', 'Trending', 'New Release', 'Popular'],
     },
     {
       title: 'Support',
-      links: ['Contact Us']
+      links: ['Contact Us'],
     },
     {
       title: 'Subscription',
-      links: ['Plans', 'Features']
+      links: ['Plans', 'Features'],
     },
     {
       title: 'Connect With Us',
@@ -30,39 +29,33 @@ export const Footer = () => {
         {
           label: 'Facebook',
           iconName: 'facebook',
-          url: ''
         },
         {
           label: 'Twitter',
           iconName: 'twitter',
-          url: ''
         },
         {
           label: 'LinkedIn',
           iconName: 'linked-in',
-          url: ''
         },
       ]
     },
   ]
 
-  const extraLinks = ['Terms of Use', ' Privacy Policy', ' Cookie Policy']
+  const extraLinks = ['Terms of Use', 'Privacy Policy', 'Cookie Policy']
 
   return (
-    <footer className='footer'>
+    <footer className="footer">
       <div className="footer__inner container">
         <nav className="footer__menu">
-          {menuItems.map(({title, links, socialLinks}, index) => (
+          {menuItems.map(({ title, links, socialLinks }, index) => (
             <div className="footer__menu-column" key={index}>
-              <a className="footer__menu-title h6" href='/'>{title}</a>
+              <a className="footer__menu-title h6" href="/">{title}</a>
               {links?.length > 0 && (
-                <ul className='footer__menu-list'>
+                <ul className="footer__menu-list">
                   {links.map((link, index) => (
                     <li className="footer__menu-item" key={index}>
-                      <a
-                        href=""
-                        className="footer__menu-link"
-                      >
+                      <a className="footer__menu-link" href="/">
                         {link}
                       </a>
                     </li>
@@ -77,11 +70,11 @@ export const Footer = () => {
         </nav>
         <div className="footer__extra">
           <p className="footer__copyright">
-            @<time dateTime="2025">2025</time> streamvib, All Rights Reserved
+            @<time dateTime="2023">2023</time> streamvib, All Rights Reserved
           </p>
           <div className="footer__extra-links">
             {extraLinks.map((link, index) => (
-              <a href="/" className="footer__extra-link" key={index}>
+              <a className="footer__extra-link" href="/" key={index}>
                 {link}
               </a>
             ))}
@@ -91,3 +84,5 @@ export const Footer = () => {
     </footer>
   )
 }
+
+export default Footer

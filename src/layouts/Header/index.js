@@ -1,3 +1,3 @@
-import {Header}  from "@/layouts/Header/Header";
+import Header from './HEader'
 
 export default Header

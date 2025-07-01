@@ -3,20 +3,19 @@
   row-gap: fluid(80, 40);
   padding-block: var(--section-padding-y);
 
-
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 16px;
 
-    @include mobile{
+    @include mobile {
       flex-direction: column;
       align-items: start;
       row-gap: 20px;
     }
 
-    &:has(.section__description){
+    &:has(.section__description) {
       align-items: end;
     }
   }

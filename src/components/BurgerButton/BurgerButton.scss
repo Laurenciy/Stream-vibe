@@ -1,6 +1,7 @@
 .burger-button {
   @include flex-center(true);
   @include square(51px);
+
   padding: 0;
   background-color: var(--color-black-10);
   border: var(--border-width-m) solid var(--color-black-15);
@@ -11,7 +12,7 @@
     border-color: transparent;
   }
 
-  &.is-active{
+  &.is-active {
     .burger-button__line {
       stroke-dasharray: 90 207;
       stroke-dashoffset: -134;
@@ -22,7 +23,6 @@
       }
     }
   }
-
 
   &:not(.is-active) {
     .burger-button__line--3 {
@@ -46,4 +46,3 @@
     }
   }
 }
-

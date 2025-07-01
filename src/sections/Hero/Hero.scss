@@ -16,15 +16,15 @@
     --heroGradientHeight: 67.5%;
 
     --heroGraidentTop: linear-gradient(
-        to bottom,
-        var(--heroGradientColorStart) 0%,
-        var(--heroGradientColorEnd) 100%
+      to bottom,
+      var(--heroGradientColorStart) 0%,
+      var(--heroGradientColorEnd) 100%
     ) 50% 0/100% var(--heroGradientHeight);
 
     --heroGraidentBottom: linear-gradient(
-        to top,
-        var(--heroGradientColorStart) 0%,
-        var(--heroGradientColorEnd) 100%
+      to top,
+      var(--heroGradientColorStart) 0%,
+      var(--heroGradientColorEnd) 100%
     ) 50% 101%/100% var(--heroGradientHeight);
 
     @include flex-center;

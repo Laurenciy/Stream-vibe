@@ -5,32 +5,30 @@
   padding-inline: var(--container-padding-x);
 }
 
-.visually-hidden{
+.visually-hidden {
   @include visually-hidden;
 }
 
-//Далее идет сокрытие элемента на указаном диапазоне экрана
-
 .visible-tablet {
-  @include tablet-above{
+  @include tablet-above {
     display: none !important;
   }
 }
 
 .hidden-tablet {
-  @include tablet{
+  @include tablet {
     display: none !important;
   }
 }
 
 .visible-mobile {
-  @include mobile-above{
+  @include mobile-above {
     display: none !important;
   }
 }
 
-.hidden-tablet {
-  @include mobile{
+.hidden-mobile {
+  @include mobile {
     display: none !important;
   }
 }

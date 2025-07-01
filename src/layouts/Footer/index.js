@@ -1,3 +1,3 @@
-import {Footer} from "@/layouts/Footer/Footer";
+import Footer from './Footer'
 
 export default Footer

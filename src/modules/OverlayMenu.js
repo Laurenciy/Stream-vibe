@@ -2,7 +2,7 @@ class OverlayMenu {
   selectors = {
     root: '[data-js-overlay-menu]',
     dialog: '[data-js-overlay-menu-dialog]',
-    burgerButton: '[data-js-overlay-menu-burger-button]'
+    burgerButton: '[data-js-overlay-menu-burger-button]',
   }
 
   stateClasses = {
@@ -19,17 +19,11 @@ class OverlayMenu {
 
   onBurgerButtonClick = () => {
     this.burgerButtonElement.classList.toggle(this.stateClasses.isActive)
-    // обращаемся к бургер кнопке и назначаем\убираем класс isActive для изменения стиля кнопки, открыто\закрыто меню
     this.dialogElement.open = !this.dialogElement.open
-    // элементу dialog добавляем\удаляем атрибут open для отображения\закрытия меню
     document.documentElement.classList.toggle(this.stateClasses.isLock)
-    // обращаемся к корневому элементу дома для блокировки скролла основной страницы
   }
 
-
-
-
-  bindEvents(){
+  bindEvents() {
     this.burgerButtonElement.addEventListener('click', this.onBurgerButtonClick)
   }
 }

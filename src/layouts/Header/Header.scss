@@ -5,8 +5,6 @@
   width: 100%;
   padding-block: fluid(22, 14);
   border-bottom: var(--border-width-s) solid transparent;
-
-
   animation-name: scrolling-header;
   animation-fill-mode: both;
   animation-timeline: scroll();
@@ -24,7 +22,7 @@
     position: fixed;
   }
 
-  &__inner{
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,17 +32,14 @@
   &__overlay-menu-dialog {
     position: fixed;
     inset: 0;
-
-
     flex-direction: column-reverse;
     justify-content: start;
     row-gap: 16px;
-
     width: 100%;
     height: 100%;
+    padding: var(--container-padding-x);
     background-color: var(--color-black-20);
     border: none;
-    padding: 16px var(--container-padding-x);
     transition-duration: var(--transition-duration);
     transition-behavior: allow-discrete;
 
@@ -52,27 +47,25 @@
       display: contents;
     }
 
-    @mixin starting-style {
+    @mixin starting-styles {
       opacity: 0;
       translate: 50%;
     }
-//  для добавления плавности появления меню
 
-    &[open]{
+    &[open] {
       display: flex;
 
       @starting-style {
-        @include starting-style
+        @include starting-styles;
       }
     }
 
-    &:not([open]){
-      @include starting-style
+    &:not([open]) {
+      @include starting-styles;
     }
   }
 
   &__menu {
-
     border-radius: var(--border-radius-l);
 
     @include laptop {
@@ -85,20 +78,20 @@
       outline: var(--border-width-l) solid var(--color-black-12);
     }
 
-    @include tablet{
+    @include tablet {
       display: flex;
       justify-content: center;
       height: 100%;
-
       border-radius: 0;
+      overflow-y: auto;
     }
 
-    &-list{
+    &-list {
       display: flex;
       align-items: center;
       column-gap: 6px;
 
-      @include tablet{
+      @include tablet {
         flex-direction: column;
         row-gap: 16px;
         margin-block: auto;
@@ -110,11 +103,11 @@
       color: var(--color-gray-75);
       border-radius: var(--border-radius-s);
 
-      @include tablet{
+      @include tablet {
         font-size: 20px;
       }
 
-      @include hover{
+      @include hover {
         color: var(--color-white);
         background-color: var(--color-red-60);
       }
@@ -125,11 +118,10 @@
         background-color: var(--color-black-10);
         pointer-events: none;
       }
-
     }
   }
 
-  &__actions{
+  &__actions {
     display: flex;
     align-items: center;
     column-gap: 10px;

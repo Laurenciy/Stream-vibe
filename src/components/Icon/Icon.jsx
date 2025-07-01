@@ -7,22 +7,17 @@ const Icon = (props) => {
     className,
     name,
     hasFill = false,
-    FallbackSVG,
   } = props
-
-  const params = {
-    fill: hasFill ? 'currentColor' : 'none',
-    stroke: hasFill ? 'none' : 'currentColor',
-  }
 
   return (
     <span
       className={classNames(className, 'icon')}
     >
-      {FallbackSVG
-        ? <FallbackSVG {...params} />
-        : <MinistaIcon iconId={name} {...params} />
-      }
+      <MinistaIcon
+        iconId={name}
+        fill={hasFill ? 'currentColor' : 'none'}
+        stroke={hasFill ? 'none' : 'currentColor'}
+      />
     </span>
   )
 }

@@ -1,5 +1,5 @@
-html{
-  &.is-lock{
+html {
+  &.is-lock {
     overflow: hidden;
   }
 }
@@ -12,7 +12,6 @@ body {
   font-family: var(--font-family-base);
   color: var(--color-gray-60);
   background-color: var(--color-black-08);
-  width: 100%;
 }
 
 main {
@@ -65,29 +64,37 @@ h6, .h6 {
 }
 
 a,
-textarea,
 button,
-select,
 label,
 input,
-svg *{
+textarea,
+select,
+svg * {
   transition-duration: var(--transition-duration);
-
 }
 
-a{
+a {
   color: inherit;
 
   @include hover {
     color: var(--color-red-45);
   }
 
-  &[class]{
+  &[class] {
     text-decoration: none;
   }
 }
 
-
-:focus-visible{
+:focus-visible {
   @include focus-visible;
 }
+
+:has(.swiper) {
+  min-width: 0;
+}
+
+//.header,
+//.content > *:not(:last-child),
+//.footer {
+//  display: none !important;
+//} это убирает основной контент страницы и отображает ту секцию с которой работаем

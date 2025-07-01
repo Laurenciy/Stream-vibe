@@ -1,9 +1,7 @@
 import './Hero.scss'
-import Button from "@/components/Button";
+import Button from '@/components/Button'
 
-
-const Hero = (props) => {
-
+const Hero = () => {
   const titleId = 'hero-title'
   const playButtonTitle = 'Play Video'
 
@@ -11,15 +9,16 @@ const Hero = (props) => {
     <section className="hero" aria-labelledby={titleId}>
       <div className="hero__pano">
         <div className="hero__pano-inner container">
-          <button className='hero__play-button'
-          type="button"
-          aria-label={playButtonTitle}
-          title={playButtonTitle}
+          <button
+            className="hero__play-button"
+            type="button"
+            aria-label={playButtonTitle}
+            title={playButtonTitle}
           >
             <img
               className="hero__play-button-image"
-              src="/play.svg"
               alt=""
+              src="/play.svg"
               width={470}
               height={470}
             />
@@ -32,15 +31,13 @@ const Hero = (props) => {
             The Best Streaming Experience
           </h1>
           <div className="hero__description">
-            <p>
-              StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlists, so you can easily find the content you want to watch.
-            </p>
-             </div>
+            <p>StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlists, so you can easily find the content you want to watch.</p>
+          </div>
           <Button
-            className='hero__button'
+            className="hero__button"
             iconName="play"
             hasFillIcon
-            label='Start Watching Now'
+            label="Start Watching Now"
           />
         </div>
       </div>
