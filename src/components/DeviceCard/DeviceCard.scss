@@ -4,9 +4,11 @@
   padding: fluid(50, 24);
   border: var(--border);
   border-radius: var(--border-radius-l);
-  background: linear-gradient(222deg, rgba(299, 0, 0, 0.50) -208.03%, rgba(229, 0, 0, 0.00) 41.32%), var(--color-black-06);
+  background:
+    linear-gradient(222deg, rgba(229, 0, 0, 0.50) -208.03%, rgba(229, 0, 0, 0.00) 41.32%),
+    var(--color-black-06);
 
-  @include laptop{
+  @include laptop {
     border-radius: var(--border-radius-m);
   }
 
@@ -24,7 +26,7 @@
     border: var(--border-width-s) solid var(--color-black-12);
     border-radius: var(--border-radius-l);
 
-    @include laptop{
+    @include laptop {
       border-radius: var(--border-radius-m);
     }
 
@@ -33,7 +35,7 @@
     }
   }
 
-  &__image{
+  &__image {
     width: 55%;
     object-fit: contain;
   }

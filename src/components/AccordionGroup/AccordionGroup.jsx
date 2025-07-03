@@ -5,12 +5,10 @@ const AccordionGroup = (props) => {
   const {
     columns = 1,
     children,
-    isOrderedList = true
+    isOrderedList = true,
   } = props
 
-  const itemsPerColumn = Math.ceil(children.length / columns )
-  // ищем последний элемент в колонке
-
+  const itemsPerColumn = Math.ceil(children.length / columns  )
   const ListTag = isOrderedList ? 'ol' : 'ul'
 
   return (
@@ -21,9 +19,12 @@ const AccordionGroup = (props) => {
       })}
     >
       {children.map((child, index) => (
-        <li className={classNames("accordion-group__item", {
-          "accordion-group__item--last-column-item": columns > 1 && itemsPerColumn / (index + 1) === 1
-        })} key={index}>
+        <li
+          className={classNames('accordion-group__item', {
+            'accordion-group__item--last-column-item': columns > 1 && itemsPerColumn / (index + 1) === 1
+          })}
+          key={index}
+        >
           {child}
         </li>
       ))}

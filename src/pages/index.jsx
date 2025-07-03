@@ -1,7 +1,8 @@
 import Hero from '@/sections/Hero'
 import Categories from '@/sections/Categories'
-import Devices from "@/sections/Devices";
-import Questions from "@/sections/Questions";
+import Devices from '@/sections/Devices'
+import Questions from '@/sections/Questions'
+import Plans from '@/sections/Plans'
 
 export const metadata = {
   title: 'Home',
@@ -10,11 +11,12 @@ export const metadata = {
 
 export default function () {
   return (
-    <div>
+    <>
       <Hero />
       <Categories />
-      <Devices/>
-      <Questions/>
-    </div>
+      <Devices />
+      <Questions />
+      <Plans />
+    </>
   )
 }

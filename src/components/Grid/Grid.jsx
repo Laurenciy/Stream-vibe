@@ -4,22 +4,23 @@ import classNames from 'classnames'
 const Grid = (props) => {
   const {
     columns = 1,
-    children
+    children,
   } = props
 
   return (
-    <ul className={classNames('grid', {
-      [`grid--${columns}`]: columns > 1,
-    })}>
+    <ul
+      className={classNames('grid', {
+        [`grid--${columns}`]: columns > 1,
+      })}
+    >
       {children.map((child, index) => (
-      <li
-        className="grid__item"
-        key={index}
-      >
-        {child}
-      </li>
-      )
-      )}
+        <li
+          className="grid__item"
+          key={index}
+        >
+          {child}
+        </li>
+      ))}
     </ul>
   )
 }

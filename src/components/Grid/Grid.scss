@@ -9,14 +9,14 @@
     --gridColumns: 2;
   }
 
-  &--3{
+  &--3 {
     --gridColumns: 3;
 
-    @include tablet{
+    @include tablet {
       --gridColumns: 2;
     }
 
-    @include mobile{
+    @include mobile {
       --gridColumns: 1;
     }
   }
