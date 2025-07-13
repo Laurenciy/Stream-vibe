@@ -1,11 +1,13 @@
+import MoviesBanner from "@/layouts/Section/MoviesBanner";
+
 export const metadata = {
   title: 'Movies & Shows',
 }
 
 export default function () {
   return (
-    <>
-      <h1>Фильмы</h1>
-    </>
+    <div>
+      <MoviesBanner/>
+    </div>
   )
 }
