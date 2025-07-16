@@ -2,6 +2,7 @@
   --ratingViewValue: 5;
 
   display: flex;
+  align-items: center;
   column-gap: 4px;
 
   &__stars {
@@ -13,10 +14,10 @@
       @include abs-cover;
 
       clip-path: polygon(
-      0 0,
-      var(--ratingViewStarsClipEnd) 0,
-      var(--ratingViewStarsClipEnd) 100%,
-      0 100%,
+        0 0,
+        var(--ratingViewStarsClipEnd) 0,
+        var(--ratingViewStarsClipEnd) 100%,
+        0 100%
       );
     }
   }

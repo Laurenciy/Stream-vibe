@@ -32,10 +32,10 @@
     font-size: fluid-to-laptop(20, 16);
     font-weight: 600;
     background-color: var(--color-red-45);
-    border-radius: var(--border-width-s);
+    border-radius: var(--border-radius-s);
 
-    @include laptop{
-      border-right: var(--border-radius-xs);;
+    @include laptop {
+      border-radius: var(--border-radius-xs);
     }
   }
 

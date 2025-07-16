@@ -3,7 +3,7 @@
   --tabsNonActiveContentDisplay: none;
 
   &--enable-only-on-mobile {
-    @include mobile-above{
+    @include mobile-above {
       --tabsNonActiveContentDisplay: block;
       --tabsNavigationDisplay: none;
     }

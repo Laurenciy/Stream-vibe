@@ -1,7 +1,7 @@
 class BaseComponent {
   constructor() {
-    if(this.constructor === BaseComponent) {
-      throw  new Error('Невозможно создать экземпляр абстрактного класса BaseComponent!')
+    if (this.constructor === BaseComponent) {
+      throw new Error('Невозможно создать экземпляр абстрактного класса BaseComponent!')
     }
   }
 
@@ -15,7 +15,7 @@ class BaseComponent {
 
         target[prop] = newValue
 
-        if(newValue !== oldValue){
+        if (newValue !== oldValue) {
           this.updateUI()
         }
 
@@ -23,8 +23,11 @@ class BaseComponent {
       },
     })
   }
-  // Перерисовка UI в ответ на обновление состояния
-  updateUI () {
+
+  /**
+   * Перерисовка UI в ответ на обновление состояния
+   */
+  updateUI() {
     throw new Error('Необходимо реализовать метод updateUI!')
   }
 }

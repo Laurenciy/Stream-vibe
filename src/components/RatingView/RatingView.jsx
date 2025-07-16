@@ -14,13 +14,13 @@ const RatingView = (props) => {
       aria-label={ariaLabel}
       title={ariaLabel}
       style={{
-        "--ratingViewValue": value
+        '--ratingViewValue': value,
       }}
     >
       <div className="rating-view__stars">
         <img
           className="rating-view__stars-unfilled"
-          src="/rating/stars_undilled.svg"
+          src="/rating/stars_unfilled.svg"
           width={98}
           height={18}
           alt=""
@@ -33,9 +33,10 @@ const RatingView = (props) => {
           alt=""
         />
       </div>
+
       {label && (
         <div className="rating-view__label">{label}</div>
-        )}
+      )}
     </div>
   )
 }

@@ -1,10 +1,13 @@
 import './Badge.scss'
 import classNames from 'classnames'
-import Icon from "@/components/Icon";
+import Icon from '@/components/Icon'
 
 const Badge = (props) => {
   const {
     className,
+    /**
+     * '' (default) | 'accent'
+     */
     mode = '',
     isBig = false,
     children,
@@ -28,9 +31,7 @@ const Badge = (props) => {
           ariaLabel={iconAriaLabel}
         />
       )}
-      <span>
-        {children}
-      </span>
+      <span>{children}</span>
     </div>
   )
 }

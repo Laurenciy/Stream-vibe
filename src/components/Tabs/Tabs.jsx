@@ -15,7 +15,7 @@ const Tabs = (props) => {
   return (
     <div
       className={classNames(className, 'tabs', {
-        'tabs--enable-only-on-mobile': isEnableOnlyOnMobile
+        'tabs--enable-only-on-mobile': isEnableOnlyOnMobile,
       })}
       data-js-tabs={JSON.stringify({
         navigationTargetElementId,

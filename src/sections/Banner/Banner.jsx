@@ -1,13 +1,12 @@
 import './Banner.scss'
-import classNames from 'classnames'
-import Button from "@/components/Button";
+import Button from '@/components/Button'
 
-const Banner = (props) => {
+const Banner = () => {
   const titleId = 'banner-title'
 
   return (
     <section
-      className='banner container'
+      className="banner container"
       aria-labelledby={titleId}
     >
       <div className="banner__inner">
@@ -20,9 +19,9 @@ const Banner = (props) => {
           </div>
         </div>
         <Button
-        className="banner-button"
-        label = "Start a Free Trail"
-        href="/subscriptions"
+          className="banner__button"
+          label="Start a Free Trail"
+          href="/subscriptions"
         />
       </div>
     </section>

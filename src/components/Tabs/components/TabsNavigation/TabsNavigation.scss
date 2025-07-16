@@ -1,8 +1,7 @@
 .tabs-navigation {
-  --tabsActiveButtonWidth: 0;
-  --tabsActiveButtonOffsetLeft: 0;
+  --tabsNavigationActiveButtonWidth: 0;
+  --tabsNavigationActiveButtonOffsetLeft: 0;
   --tabsNavigationPadding: #{fluid-to-laptop(10, 8)};
-
 
   position: relative;
   display: var(--tabsNavigationDisplay, flex);
@@ -19,23 +18,23 @@
     position: absolute;
     top: var(--tabsNavigationPadding);
     left: 0;
-    width: var(--tabsActiveButtonWidth);
+    width: var(--tabsNavigationActiveButtonWidth);
     height: calc(100% - var(--tabsNavigationPadding) * 2);
     background-color: var(--color-black-12);
     border-radius: var(--border-radius-s);
     transition-duration: var(--transition-duration);
-    translate: var(--tabsActiveButtonOffsetLeft);
-  }
+    translate: var(--tabsNavigationActiveButtonOffsetLeft);
 
-  @include laptop{
-    border-radius: var(--border-radius-xs);
+    @include laptop {
+      border-radius: var(--border-radius-xs);
+    }
   }
 
   &__button {
     flex-grow: 1;
+    position: relative;
     display: inline-flex;
     justify-content: center;
-    position: relative;
     padding: fluid-to-laptop(14, 12) fluid-to-laptop(24, 20);
     border-radius: var(--border-radius-m);
     transition-duration: var(--transition-duration);

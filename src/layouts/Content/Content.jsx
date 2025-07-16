@@ -1,5 +1,5 @@
 import './Content.scss'
-import classNames from "classnames";
+import classNames from 'classnames'
 
 const Content = (props) => {
   const {
@@ -8,9 +8,11 @@ const Content = (props) => {
   } = props
 
   return (
-    <main className={classNames('content', {
-      'content--reset-padding-top': isResetPaddingTop
-    })}>
+    <main
+      className={classNames('content', {
+        'content--reset-padding-top': isResetPaddingTop,
+      })}
+    >
       {children}
     </main>
   )

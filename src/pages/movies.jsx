@@ -1,5 +1,5 @@
-import MoviesBanner from "@/layouts/Section/MoviesBanner";
-import Collections from "@/sections/Collections";
+import MoviesBanner from '@/sections/MoviesBanner'
+import Collections from '@/sections/Collections'
 
 export const metadata = {
   title: 'Movies & Shows',
@@ -7,9 +7,9 @@ export const metadata = {
 
 export default function () {
   return (
-    <div>
-      <MoviesBanner/>
-      <Collections/>
-    </div>
+    <>
+      <MoviesBanner />
+      <Collections />
+    </>
   )
 }

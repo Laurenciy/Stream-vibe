@@ -1,7 +1,8 @@
 import './MovieCard.scss'
-import { Image } from "minista";
-import Badge from "@/components/Badge";
-import RatingView from "@/components/RatingView";
+import { Image } from 'minista'
+import Badge from '@/components/Badge'
+import RatingView from '@/components/RatingView'
+
 const MovieCard = (props) => {
   const {
     title,
@@ -11,7 +12,7 @@ const MovieCard = (props) => {
     released,
     rating,
     season,
-    href = '/movie'
+    href = '/move',
   } = props
 
   return (
@@ -46,9 +47,7 @@ const MovieCard = (props) => {
         )}
 
         {rating && (
-          <Badge
-            className="movie-card__released-badge"
-          >
+          <Badge className="movie-card__rating-badge">
             <RatingView {...rating} />
           </Badge>
         )}

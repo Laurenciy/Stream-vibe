@@ -1,7 +1,7 @@
 import './CategoryCard.scss'
 import { Image } from 'minista'
 import Icon from '@/components/Icon'
-import Badge from "@/components/Badge";
+import Badge from '@/components/Badge'
 
 const CategoryCard = (props) => {
   const {

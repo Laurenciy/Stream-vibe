@@ -1,8 +1,8 @@
 .badge {
   @include flex-center(true);
 
-
   column-gap: 2px;
+  padding: 6px 10px;
   font-size: fluid-to-laptop(14, 12);
   font-weight: 500;
   line-height: 1;
@@ -11,9 +11,8 @@
   background-color: var(--color-black-08);
   border: var(--border);
   border-radius: 50px;
-  padding: 6px 10px;
 
-  @include mobile{
+  @include mobile {
     padding-inline: 8px;
   }
 
@@ -35,7 +34,8 @@
   }
 
   &__icon {
-    &.icon {}
-    --iconSize: #{fluid-to-laptop(24, 20)};
+    &.icon {
+      --iconSize: #{fluid-to-laptop(24, 20)};
+    }
   }
 }
