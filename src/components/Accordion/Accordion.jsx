@@ -1,11 +1,11 @@
 import './Accordion.scss'
-import classNames from "classnames";
-import Icon from "@/components/Icon";
+import classNames from 'classnames'
+import Icon from '@/components/Icon'
 
 const Accordion = (props) => {
   const {
     title,
-    titleLevelClassName ='h5',
+    titleLevelClassName = 'h5',
     subtitle,
     id,
     name,
@@ -22,15 +22,14 @@ const Accordion = (props) => {
         open={isOpen}
       >
         <summary className="accordion__summary">
-          <h3 className={classNames('accordion__title', titleLevelClassName)}>
+          <h3
+            className={classNames('accordion__title', titleLevelClassName)}
+          >
             <span role="term" aria-details={id}>{title}</span>
-            {subtitle && (<span className="accordion__subtitle">{subtitle}</span>)}
+            {subtitle && <span className="accordion__subtitle">{subtitle}</span>}
             {isArrowButton && (
               <div className="accordion__arrow">
-                <Icon
-                  name="arrow-down"
-
-                />
+                <Icon name="arrow-down" />
               </div>
             )}
           </h3>

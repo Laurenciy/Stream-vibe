@@ -2,7 +2,7 @@
   width: 100%;
 
   &:has(.accordion__arrow) {
-    .accordion__title{
+    .accordion__title {
       padding-right: 0;
 
       &::before,
@@ -22,7 +22,7 @@
         grid-template-rows: 1fr;
       }
 
-      .accordion__arrow{
+      .accordion__arrow {
         rotate: 180deg;
       }
     }

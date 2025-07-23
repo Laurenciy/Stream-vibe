@@ -4,7 +4,10 @@ import classNames from 'classnames'
 const AccordionGroup = (props) => {
   const {
     className,
-    mode='',
+    /**
+     * '' (default) | 'dark'
+     */
+    mode = '',
     columns = 1,
     children,
     isOrderedList = true,

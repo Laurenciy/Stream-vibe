@@ -1,8 +1,8 @@
 import './Seasons.scss'
-import AccordionGroup from "@/components/AccordionGroup";
-import seasonItems from "@/components/Seasons/seasonItems";
-import Accordion from "@/components/Accordion";
-import EpisodeCard from "@/components/EpisodeCard";
+import AccordionGroup from '@/components/AccordionGroup'
+import seasonItems from '@/components/Seasons/seasonItems'
+import Accordion from '@/components/Accordion'
+import EpisodeCard from '@/components/EpisodeCard'
 
 const Seasons = () => {
   return (
@@ -10,9 +10,8 @@ const Seasons = () => {
       className="seasons"
       mode="dark"
       isOrderedList={false}
-
     >
-      {seasonItems.map(({title, subtitle, episodes}, index) => (
+      {seasonItems.map(({ title, subtitle, episodes }, index) => (
         <Accordion
           title={title}
           titleLevelClassName="h4"
@@ -26,7 +25,7 @@ const Seasons = () => {
           <ul className="seasons__list">
             {episodes.map((episode, index) => (
               <li className="seasons__item" key={index}>
-                <EpisodeCard {...episode}/>
+                <EpisodeCard {...episode} />
               </li>
             ))}
           </ul>

@@ -5,11 +5,11 @@
   gap: fluid-to-laptop(20, 18);
   padding-block: 40px;
 
-  @include laptop{
+  @include laptop {
     padding-top: 30px;
   }
 
-  @include mobile{
+  @include mobile {
     grid-template-columns: 1fr auto;
     grid-template-areas:
       'player number'
@@ -18,12 +18,12 @@
     background-color: var(--color-black-08);
     border-radius: var(--border-radius-s);
   }
-  
+
   &__number {
-    font-style: fluid-to-laptop(30, 24);
+    font-size: fluid-to-laptop(30, 24);
     font-weight: 600;
 
-    @include mobile{
+    @include mobile {
       grid-area: number;
     }
   }
@@ -34,7 +34,7 @@
     border-radius: var(--border-radius-l);
     overflow: hidden;
 
-    @include mobile{
+    @include mobile {
       grid-area: player;
     }
 
@@ -51,17 +51,17 @@
     height: 118px;
     object-fit: cover;
 
-    @include mobile{
+    @include mobile {
       width: 100%;
       height: 200px;
     }
 
-    @include mobile-s{
-      height: 200px;
+    @include mobile-s {
+      height: 118px;
     }
   }
 
-  &__play-button{
+  &__play-button {
     @include abs-center;
     @include flex-center;
     @include square(50px);
@@ -69,14 +69,14 @@
     padding: 0;
     color: var(--color-white);
     background-color: color-mix(
-    in srgb,
-    var(--color-black) 60%,
-    transparent
+      in srgb,
+      var(--color-black) 60%,
+      transparent
     );
     border: none;
     border-radius: 50%;
 
-    @include hover{
+    @include hover {
       background-color: var(--color-red-60);
     }
 
@@ -99,7 +99,7 @@
     display: grid;
     row-gap: fluid-to-laptop(14, 10);
 
-    @include mobile{
+    @include mobile {
       grid-area: body;
     }
   }
@@ -110,7 +110,7 @@
     align-items: center;
     gap: 10px 16px;
 
-    @include mobile{
+    @include mobile {
       flex-direction: column-reverse;
       align-items: start;
     }
@@ -126,7 +126,7 @@
     border: var(--border);
     border-radius: var(--border-radius-s);
 
-    @include mobile{
+    @include laptop {
       border-radius: var(--border-radius-xs);
     }
   }
