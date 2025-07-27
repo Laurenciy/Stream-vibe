@@ -7,7 +7,7 @@
   &__label {
     font-size: fluid-to-laptop(18, 16);
     font-weight: 600;
-    color: var(--color-white);
+    color: var(--colo-white);
   }
 
   &__required-star {
@@ -29,7 +29,6 @@
     border: var(--border);
     border-radius: var(--border-radius-s);
 
-
     @include laptop {
       border-radius: var(--border-radius-xs);
     }
@@ -38,15 +37,15 @@
       border-color: var(--color-white);
     }
 
-    &:user-invalid{
+    &:user-invalid {
       border-color: var(--color-red-45);
     }
 
     &:disabled {
-      @include disabled
+      @include disabled;
     }
 
-    &::placeholder{
+    &::placeholder {
       color: var(--color-gray-60);
     }
   }

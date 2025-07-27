@@ -1,43 +1,50 @@
 import './Field.scss'
+import getIdFromTitle from '@/utils/getIdFromTitle'
 import classNames from 'classnames'
-import getIdFromTitle from "@/utils/getIdFromTitle";
 
 const Field = (props) => {
   const {
     className,
     id = getIdFromTitle(props.label),
     label,
+    /**
+     * undefined (default) | 'email | 'textarea'
+     */
     type,
     placeholder,
     isRequired,
     inputMode,
-    mask
+    mask,
+    renderBefore,
   } = props
 
-  const Component = type === 'textarea' ? 'textarea' : 'input'
+  const Component = type === 'textarea'
+    ? 'textarea'
+    : 'input'
 
   const extraAttrs = {}
 
-  if(mask) {
+  if (mask) {
     extraAttrs['data-js-input-mask'] = mask
   }
-  
+
   return (
     <div
       className={classNames(className, 'field')}
     >
-
       <label
-        className="label field__label"
+        className="field__label"
         htmlFor={id}
       >
         {label} {isRequired && (
           <span
             className="field__required-star"
-            aria-hidden="true">*</span>
-      )}
+            aria-hidden="true"
+          >*</span>
+        )}
       </label>
       <div className="field__body">
+        {renderBefore?.('field__control')}
         <Component
           className="field__control"
           id={id}

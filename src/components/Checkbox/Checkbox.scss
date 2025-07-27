@@ -3,7 +3,7 @@
   align-items: center;
   column-gap: fluid-to-laptop(10, 8);
 
-  @include hover{
+  @include hover {
     color: var(--color-white);
 
     .checkbox__input {
@@ -38,7 +38,7 @@
     }
 
     &:required {
-      & + .checkbox__label::after{
+      & + .checkbox__label::after {
         content: ' *' / '';
         color: var(--color-red-45);
       }

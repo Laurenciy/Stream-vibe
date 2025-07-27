@@ -1,13 +1,13 @@
 import './Checkbox.scss'
+import getIdFromTitle from '@/utils/getIdFromTitle'
 import classNames from 'classnames'
-import getIdFromTitle from "@/utils/getIdFromTitle";
 
 const Checkbox = (props) => {
   const {
     className,
     id = getIdFromTitle(props.label),
     label,
-    isRequired
+    isRequired,
   } = props
 
   return (
@@ -16,9 +16,9 @@ const Checkbox = (props) => {
       htmlFor={id}
     >
       <input
-        type="checkbox"
         className="checkbox__input"
         id={id}
+        type="checkbox"
         required={isRequired}
       />
       <span className="checkbox__label">
