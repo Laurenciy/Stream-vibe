@@ -1,5 +1,5 @@
 .select {
-  --selectButtonArrowIconUrl: url('../../assets/images/select/arrow-down.svg');
+  --selectButtonArrowIconUrl: url('../../assets/images/select/arrow-down_gray.svg');
   --selectButtonArrowIconSize: #{fluid-to-laptop(24, 20)};
   --selectButtonGapX: #{fluid-to-laptop(6, 4)};
   --selectButtonPaddingX: #{fluid-to-laptop(12, 8)};
@@ -14,30 +14,32 @@
   &__original-control {
     appearance: none;
     padding-left: var(--selectButtonPaddingX);
-    padding-right: calc(var(--selectButtonArrowIconSize)
-    + var(--selectButtonPaddingX)
-    + var(--selectButtonGapX));
+    padding-right: calc(
+      var(--selectButtonArrowIconSize)
+      + var(--selectButtonPaddingX)
+      + var(--selectButtonGapX)
+    );
     background-image: var(--selectButtonArrowIconUrl);
     background-position: calc(100% - var(--selectButtonPaddingX)) 50%;
-    background-size: var(--selectButtonArrowIconUrl);
+    background-size: var(--selectButtonArrowIconSize);
     background-repeat: no-repeat;
+
+    @include mobile-above {
+      @include visually-hidden;
+    }
 
     &:disabled {
       & + .select__body {
         @include disabled;
 
-        *{
+        * {
           pointer-events: none;
         }
       }
     }
-
-    @include mobile-above {
-      @include visually-hidden;
-    }
   }
 
-  &__body{
+  &__body {
     position: relative;
   }
 
@@ -46,7 +48,7 @@
     user-select: none;
     cursor: pointer;
 
-    *{
+    * {
       pointer-events: none;
     }
   }
@@ -59,16 +61,16 @@
     padding-inline: var(--selectButtonPaddingX);
     transition-duration: var(--transition-duration);
 
-    @include mobile{
+    @include mobile {
       @include visually-hidden;
     }
-
 
     &::after {
       @include square(var(--selectButtonArrowIconSize));
 
       content: '';
-      background: var(--selectButtonArrowIconUrl) center/contain no-repeat;
+      background:
+        var(--selectButtonArrowIconUrl) center/contain no-repeat;
       transition-duration: inherit;
     }
 
